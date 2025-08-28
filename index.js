@@ -1,3 +1,5 @@
+
+
 function getId(id) {
   return document.getElementById(id);
 }
@@ -6,7 +8,7 @@ function getClass(className) {
   return document.getElementsByClassName(className);
 }
 
-// Heart Button Logic
+// Heart Button
 const hearts = document.querySelectorAll(".fa-heart");
 const heartCount = getId("heart-count");
 
@@ -17,12 +19,12 @@ hearts.forEach((heart) => {
   });
 });
 
-// Copy Button Logic
+// Copy Button
 const copyButtons = document.querySelectorAll(".fa-copy");
 const copyCount = document.querySelector(".copy-count");
 
 copyButtons.forEach((copyBtn) => {
-  copyBtn.parentElement.addEventListener("click", function () {
+  copyBtn.parentElement.addEventListener("click", function(){
     const card = copyBtn.closest(".card-emergency");
     const number = card.querySelector("p.text-2xl").innerText;
     navigator.clipboard.writeText(number);
@@ -33,13 +35,13 @@ copyButtons.forEach((copyBtn) => {
   });
 });
 
-// Call Button Logic
+// Call Button
 const callButtons = document.querySelectorAll(".fa-phone");
 const coinCount = getId("coin-count");
 const historyContainer = document.querySelector(".save.history");
 
 callButtons.forEach((callBtn) => {
-  callBtn.parentElement.addEventListener("click", function () {
+  callBtn.parentElement.addEventListener("click", function(){
     const card = callBtn.closest(".card-emergency");
     const serviceName = card.querySelector("h1").innerText;
     const number = card.querySelector("p.text-2xl").innerText;
