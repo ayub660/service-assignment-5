@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     if (callButton) {
-      callButton.addEventListener("click", function () {
+      callButton.addEventListener("click", function(){
         const h1 = card.getElementsByTagName("h1")[0];
         const numberEl = card.getElementsByTagName("p");
 
